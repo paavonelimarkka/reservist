@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "5734de91-5cea-4140-9e51-3089fe182d1d",
+		"name": "Reservist",
+		"description": "Collection for Reservist app (YTSP0200)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GET all the users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST an user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Olli Opiskelija\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						},
+						"description": "The only thing you can provide here is the name for the new user\r\n\r\nFor example:\r\n\r\n{\r\n    \"name\": \"Olli Opiskelija\"\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE an user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Olli Opiskelija\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						},
+						"description": "The only thing you can provide here is the name for the user to be deleted\r\n\r\nFor example:\r\n\r\n{\r\n    \"name\": \"Olli Opiskelija\"\r\n}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Professional",
+			"item": [
+				{
+					"name": "GET all the professionals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/professionals",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"professionals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST a professional",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Leevi Lehtori\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/professionals",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"professionals"
+							]
+						},
+						"description": "The only thing you can provide here is the name for the new professional\r\n\r\nFor example:\r\n\r\n{\r\n    \"name\": \"Leevi Lehtori\"\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE a professional",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Leevi Lehtori\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/professionals",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"professionals"
+							]
+						},
+						"description": "The only thing you can provide here is the name for the professional to be deleted\r\n\r\nFor example:\r\n\r\n{\r\n    \"name\": \"Leevi Lehtori\"\r\n}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservation",
+			"item": [
+				{
+					"name": "GET all the reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/reservations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST a reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"Olli Opiskelija\",\r\n    \"professional\": \"Leevi Lehtori\",\r\n    \"reservationStart\": \"December 17, 2021 14:00:00\",\r\n    \"reservationEnd\": \"December 17, 2021 16:00:00\",\r\n    \"subject\": \"Uusintatentti\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/reservations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations"
+							]
+						},
+						"description": "Provide a new reservation.\r\n\r\nFor example:\r\n\r\n{\r\n    \"user\": \"Olli Opiskelija\",\r\n    \"professional\": \"Leevi Lehtori\",\r\n    \"reservationStart\": \"December 17, 2021 14:00:00\",\r\n    \"reservationEnd\": \"December 17, 2021 16:00:00\",\r\n    \"subject\": \"Uusintatentti\"\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT a reservation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"Olli Opiskelija\",\r\n    \"professional\": \"Leevi Lehtori\",\r\n    \"reservationStart\": \"December 17, 2021 14:00:00\",\r\n    \"reservationEnd\": \"December 17, 2021 17:00:00\",\r\n    \"subject\": \"Uusintatentti\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/reservations/6001b78c2d14d65908c05c76",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations",
+								"6001b78c2d14d65908c05c76"
+							]
+						},
+						"description": "You can update the reservation via PUT\r\n\r\nFor example:\r\n\r\n{\r\n    \"user\": \"Olli Opiskelija\",\r\n    \"professional\": \"Leevi Lehtori\",\r\n    \"reservationStart\": \"December 17, 2021 14:00:00\",\r\n    \"reservationEnd\": \"December 17, 2021 16:00:00\",\r\n    \"subject\": \"Uusintatentti\"\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH a reservation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\": \"Kypsyysnäyte\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/reservations/6001b78c2d14d65908c05c76",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations",
+								"6001b78c2d14d65908c05c76"
+							]
+						},
+						"description": "You can PATCH the reservation.\r\n\r\nFor example:\r\n\r\n{\r\n    \"subject\": \"Kypsyysnäyte\"\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE  a reservation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/reservations/6001b78c2d14d65908c05c76",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reservations",
+								"6001b78c2d14d65908c05c76"
+							]
+						},
+						"description": "For a reservation you need to provide an id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DEBUG clear User table from the database",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/del",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"del"
+					]
+				},
+				"description": "DEBUG method. Clear the User table from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "DEBUG clear Professional table from the database",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/professionals/del",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"professionals",
+						"del"
+					]
+				},
+				"description": "DEBUG method. Clear the Professional table from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "DEBUG clear Reservation table from the database",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/reservations/debug/del",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reservations",
+						"debug",
+						"del"
+					]
+				},
+				"description": "DEBUG method. Clear the Reservation table from the database"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.xw9bt3Ay--Mfkqu3yZD56v2QcJozlXZwsuJJnT3mBe8",
+				"type": "string"
+			}
+		]
+	}
+}
